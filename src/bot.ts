@@ -14,15 +14,12 @@ export default async () => {
             const rJid = m.messages[0].key.remoteJid;
 
             if (msg){
-                console.log(msg)
                 switch(msg.split(' ', 1)[0]){
 
                     case '$gpt1':
-                        await socket.sendMessage(rJid, {text: 'Aguarde, vou gerar uma resposta para você'}, {quoted: m.messages[0]});
                         await socket.sendMessage(rJid, {text: `${await ChatGPT(msg)}`}, {quoted: m.messages[0]});
                         break;
             
-                    
 
                     case '$gpt-audio':
                         await socket.sendMessage(rJid, {text: 'Gerando audio...'}, {quoted: m.messages[0]});

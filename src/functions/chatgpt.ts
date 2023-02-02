@@ -28,3 +28,6 @@ export const ChatGPT = async (prompt: string) => {
 
     return response
 };
+console.log(ChatGPT)
+ChatGPT('$gpt-audio qual é o status da sua api neste momento')
+console.log(ChatGPT)
