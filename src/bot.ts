@@ -14,6 +14,7 @@ export default async () => {
             const rJid = m.messages[0].key.remoteJid;
 
             if (msg){
+                console.log(msg)
                 switch(msg.split(' ', 1)[0]){
 
                     case '$gpt1':
